@@ -26,7 +26,7 @@ function loadAllDestinations() {
             const destinationImage = document.getElementById('destination-image');
             for(let i = 0; i < navListNames.length; i++) {
                 // Append html 
-                outputImage += `<img src="./assets/destination/image-${destinations[i].name}.webp" alt="image" class="content-hidden">`;
+                outputImage += `<img src="${destinations[i].images.webp}" alt="image" class="content-hidden">`;
                 outputContent += `
                     <div class="content-hidden">
                         <h2 class="dest-title">${destinations[i].name}</h2>
