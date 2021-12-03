@@ -123,16 +123,26 @@ header .logo-container img{
     background-color: transparent;
     z-index: 2;
 }
+.navbar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 40px;
+    top: 50%;
+    height: 1px;
+    background-color: var(--light-blue);
+    opacity: .2;
+}
 .logo-container::after {
     content: '';
     position: absolute;
     left: 90px;
-    width: 55vw;
+    width: 70vw;
     top: 50%;
     height: 1px;
     background-color: var(--light-blue);
     opacity: 0.2;
-    z-index: 1;
+    z-index: -1;
 }
 /* ------------------------ Responsive Navbar ------------------------ */
 .nav .hamburger, .close-nav {
@@ -329,7 +339,6 @@ header .logo-container img{
     padding-left: 120px;
 }
 .technology-content {
-    padding-top: 5%;
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -388,6 +397,9 @@ header .logo-container img{
     }
     .crew-content .left-part {
         padding-top: 25vh;
+    }
+    .technology-content {
+        padding-top: 5%;
     }
 }
 @media only screen and (min-width: 801px) {
