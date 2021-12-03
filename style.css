@@ -14,6 +14,8 @@ a {
 body {
     min-height: 100vh;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 body main h5 {
     padding-top: 40px;
@@ -91,6 +93,7 @@ p {
 /* ------------------------ Home Page ------------------------ */ 
 .home-body {
     background-image: url(./assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
 }
 /* ------------------------ Navbar ------------------------ */ 
 header {
@@ -149,9 +152,8 @@ header .logo-container img{
 /* ------------------------ Main Content ------------------------ */ 
 .home-body main {
     display: flex;
-    align-items: center;
-    padding: 12% 50px 50px 50px;
     gap: 50px;
+    align-items: center;
 }
 .home-body main h5 {
     padding: 0;
@@ -161,12 +163,13 @@ header .logo-container img{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 0 100px;
 }
 .home-body main .right-part {
     flex: 1;
-    align-self: flex-end;
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 .home-body main .right-part button {
     font-family: 'Bellefair', serif;
@@ -187,9 +190,23 @@ header .logo-container img{
 .destination-body {
     background-image: url(./assets/destination/background-destination-desktop.jpg);
 }
+.destination-body main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 100px);
+    justify-content: center;
+}
+.destination-body main h5 {
+    position: absolute;
+    top: 70px;
+}
 .dest-content {
     display: flex;
     gap: 30px;
+    align-items: center;
+    padding-top: 40px;
+    /* padding-top: 120px;
+    padding-bottom: 100px; */
 }
 .dest-content .left-part {
     flex: 1;
@@ -253,16 +270,17 @@ header .logo-container img{
 /* ------------------------ Crew Page ------------------------ */ 
 .crew-body {
     background-image: url(./assets/crew/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
 }
 .crew-content {
-    gap: 40px;
+    gap: 40px;    
 }
 .crew-content .left-part {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 100px;
-    padding: 20vh 0 50px 50px;
+    padding: 10vh 0 50px 50px;
 }
 .crew-content .left-part h4 {
     color: var(--light-blue);
@@ -311,7 +329,7 @@ header .logo-container img{
     padding-left: 120px;
 }
 .technology-content {
-    padding-top: 40px;
+    padding-top: 5%;
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -363,6 +381,23 @@ header .logo-container img{
     max-height: 70vh;
     width: 100%;
 }
+@media only screen and (min-width: 1440px) {
+    .dest-content {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+    .crew-content .left-part {
+        padding-top: 25vh;
+    }
+}
+@media only screen and (min-width: 801px) {
+    .home-body main {
+        min-height: calc(100vh - 100px);
+    }
+    .technology-body .left-part .text-container p{
+        width: 80%;
+    }
+}
 @media only screen and (max-width: 1056px) {
     /* ------------------------ Technology ------------------------*/
     .technology-body .left-part {
@@ -397,6 +432,8 @@ header .logo-container img{
     /* ------------------------ Home ------------------------*/
     .home-body main {
         flex-direction: column;
+        height: initial;
+        padding-top: 80px;
     }
     .home-body main .left-part {
         justify-content: center;
@@ -406,11 +443,12 @@ header .logo-container img{
         text-align: center;
     }
     .home-body .right-part {
-        align-self: center !important;
+        padding-bottom: 20px;
     }
     /* ------------------------ Destination ------------------------*/
     .dest-content {
         flex-direction: column;
+        padding-top: 120px;
     }
     .dest-content .left-part {
         width: 20%;
@@ -506,6 +544,9 @@ header .logo-container img{
     /* ------------------------ Crew ------------------------ */
     .crew-content .text-container {
         padding: 0 10px;
+    }
+    .technology-content .left-part {
+        padding-right: 20px;
     }
 }
 @media only screen and (max-width: 500px) {
